@@ -10,19 +10,18 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const average = (array) => {
+const average = (novoArray) => {
   let soma = 0;
-  if (array.lenght === 0) {
+  if (novoArray.lenght === 0) {
     return undefined;
   }
-
-  for (let index = 0; index < array.lenght; index += 1) {
-    if (typeof array[index] !== 'number') {
+  for (let index = 0; index < novoArray.lenght; index += 1) {
+    if (typeof novoArray[index] !== 'number') {
       return undefined;
     }
-    soma += array[index];
+    soma += novoArray[index];
   }
-  return Math.round(soma / array.lenght);
+  return Math.round(soma / novoArray.lenght);
 };
-
+console.log(average([3, '4', 5]));
 module.exports = average;
