@@ -12,16 +12,15 @@
 */
 const average = (novoArray) => {
   let soma = 0;
-  if (novoArray.lenght === 0) {
+  if (novoArray.length === 0) {
     return undefined;
   }
-  for (let index = 0; index < novoArray.lenght; index += 1) {
+  for (let index = 0; index < novoArray.length; index += 1) {
     if (typeof novoArray[index] !== 'number') {
       return undefined;
     }
     soma += novoArray[index];
   }
-  return Math.round(soma / novoArray.lenght);
+  return Math.round(soma / novoArray.length);
 };
-console.log(average([3, '4', 5]));
 module.exports = average;
